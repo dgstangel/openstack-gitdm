@@ -20,8 +20,11 @@ launchpad = Launchpad.login_with('openstack-dm', 'production')
 project = launchpad.projects[args.project]
 series = project.getSeries(name=args.series)
 
-for milestone in series.all_milestones:
-    for task in milestone.searchTasks(status='Fix Released'):
-        assignee = task.assignee.name if task.assignee else '<unknown>'
-        date = task.date_fix_committed or task.date_fix_released
-        print task.bug.id, assignee, date.date()
+if series.all_milestones == None:
+    print "Project ", args.project, " has no milestones defined"
+else:
+    for milestone in series.all_milestones:
+        for task in milestone.searchTasks(status='Fix Released'):
+            assignee = task.assignee.name if task.assignee else '<unknown>'
+            date = task.date_fix_committed or task.date_fix_released
+            print task.bug.id, assignee, date.date()

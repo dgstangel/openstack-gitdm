@@ -6,3 +6,27 @@ keystone 2012.2..2013.1.rc2 (bec8b31|0bc423a|617b700|76af49f|e093e81|3779c67|a92
 horizon 2012.2..2013.1.rc2
 quantum 2012.2..2013.1.rc2 (9f55912|cf00be0|e6b5148|1001685|ebd2445|36d5755|9a23e10|810334e|5865916|c300aad|d59c0aa|1eb6894|642b7e2|549afdb|2975e29|919976a|5655d53|e096581|acb2686|dca47b1|2842653|267d3c1|cc72d0a|7ecf6eb|c19b4f3|b70e2c0|202fb6e|92a044e|5e1f7ad|39bee34|25878ca|1586b24|7caf323|dc1c36f|5c1c23d|5da83e5|2caed82|1056245|02fbf7d)
 cinder 2012.2..2013.1.rc3
+# openstack-ci work
+# note: need to figure out the excludes, for jenkins, etc
+config c73536a..
+zuul 326e355..
+jenkins-job-builder 560954b..
+jeepyb 101d17e..
+devstack-gate c111a63..
+git-review b0e75ed..
+gerrit 5e2dd98..
+gerritbot 103f098..
+gerritlib 900136e..
+meetbot a306d7c..
+openstack-nose a103741..
+nose-html-output c3d2512..
+tempest 4e08690..
+# python client libraries
+# note: the launchpad/buglist.py script will need to be modified in order
+#       to harvest bugs from these
+python-cinderclient 1.0.0..
+python-novaclient 2.9.0..
+python-glanceclient 0.5.1..
+python-quantumclient 2.1..
+python-keystoneclient 0.1.3..
+python-swiftclient 1.2.0..
